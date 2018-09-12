@@ -1,0 +1,89 @@
+/*****************************
+  Site button style
+*****************************/
+
+.btn{
+  text-decoration: none;
+  border: none;
+  outline: 0;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  padding: 0 1rem;
+  margin: 5px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  position: relative;
+  z-index: 6;
+}
+
+.default_button{
+  color: #111;
+  opacity: 1;
+  background: lighten($SUN-FLOWER, 10%);
+  transition: all 0.3s ease-in-out;
+  &:hover{
+    color: #fff;
+    background: darken($SUN-FLOWER, 10%);
+  }
+}
+
+
+.btn-floating {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 37px;
+  height: 37px;
+  padding: 0;
+  border-radius: 50%;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.btn-floating:disabled,
+.btn:disabled {
+  background-color: #DFDFDF !important;
+  box-shadow: none;
+  color: #9F9F9F !important;
+  cursor: default;
+}
+
+.btn-floating:disabled * {
+  pointer-events: none;
+}
+
+.btn-floating:disabled:hover,
+.btn:disabled:hover {
+  background-color: #DFDFDF;
+  color: #9F9F9F;
+}
+
+.btn,
+.btn-floating,
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.btn-floating:hover,
+.btn:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+}
+
+.btn,
+.btn-floating i {
+  text-align: center;
+}
+
+.btn-floating i {
+  font-size: 1.6rem;
+  line-height: inherit;
+}
+
+.btn-floating,
+.btn-floating i {
+  color: #fff;
+  line-height: 37px;
+  display: inline-block;
+}

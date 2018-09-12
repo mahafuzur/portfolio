@@ -1,0 +1,56 @@
+/*****************************
+  home page welcome box style
+*****************************/
+
+.welcome {
+  color: #fff;
+  background: rgba($BLUE-DIANNE, 0.8);
+  background-clip: padding-box;
+  border: 5px solid transparent;
+  box-shadow: 0px 0px 0px 10px rgba($white, 0.5), 0px 0px 0px 1px lighten($SUN-FLOWER, 10%) inset;
+  top: 20%;
+  padding: 20px 10px;
+  margin-bottom: 30px;
+  @include grid-column(7);
+  @include grid-shift(4);
+  z-index: 5;
+  overflow: hidden;
+  h2 {
+    font-size: modular-scale(2, $base-font-size, $base-font-ratio);
+    line-height: 1.4;
+    color: #fff;
+  }
+  h2,
+  p {
+    transform: translateY(1000%);
+    animation: slide_from_bottom 1s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  h2.adelay1 {
+    animation-delay: 1.2s;
+  }
+  h2.adelay2 {
+    animation-delay: 1.4s;
+  }
+  h2.adelay3 {
+    animation-delay: 1.5s;
+  }
+  h2 span {
+    color: lighten($SUN-FLOWER, 10%);
+  }
+  #typed {
+    color: lighten($SUN-FLOWER, 10%);
+    font-size: modular-scale(3, $base-font-size, $base-font-ratio);
+  }
+  h2 span.typed-cursor {
+    color: #fff;
+    font-size: modular-scale(3, $base-font-size, $base-font-ratio);
+  }
+  .default_button {
+    opacity: 0;
+  }
+  .default_button.opacity {
+    animation-delay: 2.8s;
+    animation-fill-mode: forwards;
+  }
+}

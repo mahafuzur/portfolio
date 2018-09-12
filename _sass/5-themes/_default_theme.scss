@@ -1,0 +1,243 @@
+/*****************************
+  Default Theme
+*****************************/
+
+
+/* Theme Variable */
+
+
+/* Theme Style */
+
+body {
+  color: $base-font-color;
+  background-image: linear-gradient(160deg, rgba(41, 128, 185, 0.6), rgba(241, 196, 15, 0.6)), url(../images/black-felt.png);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $base-font-color;
+}
+
+p {
+  color: $base-font-color;
+}
+
+footer {
+  border-top: 1px solid lighten($SUN-FLOWER, 10%);
+  background: $BLUE-DIANNE;
+  p {
+    color: #fff;
+  }
+}
+
+#loading {
+  background-color: $BLUE-DIANNE;
+  .text-holder {
+    color: #fff;
+    h2 {
+      color: lighten($SUN-FLOWER, 10%);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+    }
+    h6 {
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+    }
+  }
+  .box-holder {
+    .load-box {
+      border: 4px solid #fff;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      .box-inner {
+        background-color: lighten($SUN-FLOWER, 10%);
+      }
+    }
+  }
+}
+
+.default_button {
+  color: #111;
+  background: lighten($SUN-FLOWER, 10%);
+  &:hover {
+    color: #fff;
+    background: darken($SUN-FLOWER, 10%);
+  }
+}
+
+.btn-floating:disabled,
+.btn:disabled {
+  background-color: #DFDFDF !important;
+  color: #9F9F9F !important;
+}
+
+.btn-floating:disabled:hover,
+.btn:disabled:hover {
+  background-color: #DFDFDF;
+  color: #9F9F9F;
+}
+
+.btn,
+.btn-floating,
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.btn-floating:hover,
+.btn:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+}
+
+.btn-floating,
+.btn-floating i {
+  color: #fff;
+}
+
+.navigation {
+  background: rgba($BLUE-DIANNE, 0.8);
+  li {
+    border-bottom: 1px solid darken($BLUE-DIANNE, 10%);
+    border-top: 1px solid lighten($BLUE-DIANNE, 10%);
+    a {
+      color: $CLOUDS;
+      &:hover {
+        background: lighten($SUN-FLOWER, 10%);
+        color: $black;
+      }
+    }
+  }
+}
+
+#nav-icon3 span {
+  background: lighten($SUN-FLOWER, 10%);
+}
+
+.welcome {
+  color: #fff;
+  background: rgba($BLUE-DIANNE, 0.8);
+  box-shadow: 0px 0px 0px 10px rgba($white, 0.5), 0px 0px 0px 1px lighten($SUN-FLOWER, 10%) inset;
+  h2 {
+    color: #fff;
+  }
+  h2 span {
+    color: lighten($SUN-FLOWER, 10%);
+  }
+  #typed {
+    color: lighten($SUN-FLOWER, 10%);
+  }
+  h2 span.typed-cursor {
+    color: #fff;
+  }
+}
+
+.projects {
+  .project_image {
+    background: rgba($BLUE-DIANNE, 0.8);
+  }
+  .item-hover.square .img {
+    background: #fff;
+  }
+  .item-hover.square .info:before,
+  .item-hover.square .img:before {
+    box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .item-hover.square.effect .info {
+    background: lighten($SUN-FLOWER, 10%);
+  }
+  .item-hover.square.effect .info p {
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  .item-hover.all_project_button {
+    background: lighten($SUN-FLOWER, 10%);
+  }
+  .item-hover.all_project_button a {
+    color: $BLUE-DIANNE;
+  }
+  .item-hover.square.all_project_button .info:after {
+    background: rgba(250, 250, 250, 0.5);
+  }
+  .feature_project_heading {
+    color: lighten($SUN-FLOWER, 40%);
+    background-color: lighten($SUN-FLOWER, 10%);
+    text-shadow: -1px -1px 1px darken($SUN-FLOWER, 10%), 2px 2px 1px lighten($SUN-FLOWER, 5%);
+  }
+}
+
+.half_page .project_image {
+  background: rgba($BLUE-DIANNE, 1);
+}
+
+.slide-viewer {
+  .slide-buttons {
+    background: rgba(lighten($SUN-FLOWER, 10%), 0.9);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  }
+  .slide-btn {
+    color: lighten($BLUE-DIANNE, 10%);
+  }
+  .slide-btn.active,
+  .slide-btn:hover {
+    color: #fff;
+  }
+}
+
+
+.half_page {
+  header {
+    border-bottom: 5px solid #333;
+  }
+  .header-background {
+    background-image: linear-gradient(-45deg, rgba(241, 196, 15, 0.7), rgba(41, 128, 185, 0.7)), url(../images/ss1.jpg);
+  }
+  .project_image {
+    background: rgba($BLUE-DIANNE, 1);
+  }
+}
+
+.single_project {
+  .single_project_info {
+    color: #333;
+    background: rgba(lighten($SUN-FLOWER, 10%), 0.9);
+    border-right: 1px solid rgba(lighten($SUN-FLOWER, 20%), 0.9);
+  }
+  .single_project_info ul li {
+    border-bottom: 1px solid rgba(lighten($SUN-FLOWER, 15%), 0.9);
+    border-top: 1px solid rgba(lighten($SUN-FLOWER, 2%), 0.9);
+  }
+  .single_project_info span.info_title {
+    color: $BLUE-DIANNE;
+  }
+  .single_project_image {
+    background: rgba(lighten($SUN-FLOWER, 10%), 0.9);
+    border-left: 1px solid rgba(darken($SUN-FLOWER, 10%), 0.9);
+  }
+  .single_project_info a {
+    color: $BLUE-DIANNE;
+  }
+  .single_project_info a:hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+  .single_project_info strong {
+    border-bottom: 1px solid #333;
+  }
+  .single_project .tags span {
+    text-shadow: 1px 1px 0px #ddd;
+  }
+  .single_project_info .reverse_button {
+    background: $BLUE-DIANNE;
+    color: $white;
+  }
+  .single_project_info .reverse_button:hover {
+    color: lighten($SUN-FLOWER, 10%);
+    background: darken($BLUE-DIANNE, 10%);
+  }
+}

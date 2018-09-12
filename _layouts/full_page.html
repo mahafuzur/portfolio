@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+
+<!-- remove this loader, install new
+<div class="loader"></div> -->
+  
+{% include bg_loader.html %}
+
+<div class="full_height_content {%if page.page_class %}{{page.page_class}}{% else %}{{layout.page_class}}{% endif %}">
+
+{{content}}
+
+</div>

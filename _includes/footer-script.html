@@ -1,0 +1,17 @@
+
+{% if page.layout != "page" %}
+<script src="{{site.baseurl}}/assets/js/p5.js"></script>
+<script src="{{site.baseurl}}/assets/js/canvas-script.js"></script>
+<script src="{{site.baseurl}}/assets/js/typed.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/slider.js"></script>
+{% endif %}
+{% if page.layout != "full_page" %}
+<script src="{{site.baseurl}}/assets/js/scrollreveal.min.js"></script>
+{% endif %}
+<script src="{{site.baseurl}}/assets/js/custom.js"></script>
+
+<script>
+jQuery('#nav-icon3').click(function () {
+  jQuery(this).toggleClass('open');
+});
+</script>

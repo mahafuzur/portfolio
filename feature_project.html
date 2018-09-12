@@ -1,0 +1,37 @@
+--- 
+layout: full_page
+title : "Portfolio"
+background_image: "about_bg_small.jpg"
+bg_class: "slide_from_left"
+body_class: "full_page"
+page_class: "feature_project"
+---
+
+
+<div class="projects box ">
+  <h2 class="feature_project_heading">Some of my work</h2>
+  <div class="project_image">
+    {% for project in site.projects limit: 7 %}
+    <div class="item-hover square effect">
+      <a href="{{site.baseurl}}{{project.url}}">
+       {% assign file_name = project.url | split: "/" | last %}
+        <div class="img">
+          <img src="{{site.baseurl}}{{project.url | remove: file_name  }}assets/{{project.images | first}}" alt="img">
+        </div>
+        <div class="info">
+          <h4>{{project.title}}</h4>
+          <p>{{project.category}}</p>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+
+    <div class="item-hover square all_project_button">
+      <a href="projects.html">
+        <div class="img"></div>
+        <div class="info"><h4>More Work</h4></div>
+      </a>
+    </div>
+  </div>
+</div>
+

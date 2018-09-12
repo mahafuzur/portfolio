@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  {% include meta.html %}
+  <title>{{site.title}} {% if page.title %} - {{page.title}}{% endif %}</title>
+  {% include head-links.html %}
+  {% include head-script.html %}
+</head>
+<body class="{%if page.body_class %}{{page.body_class}}{% else %}{{layout.body_class}}{% endif %}">
+
+    {% include nav.html %}

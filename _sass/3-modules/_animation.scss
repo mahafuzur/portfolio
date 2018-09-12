@@ -1,0 +1,57 @@
+/*****************************
+  Site animation
+*****************************/
+
+.slide_from_bottom{
+  	animation: slide_from_bottom 1.2s ease-in-out;
+}
+
+@keyframes slide_from_bottom{
+	0%{
+		transform: translateY(1000%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+
+.slide_from_right{
+  animation: slide_from_right 1s ease-in-out;
+}
+
+@keyframes slide_from_right{
+	0%{
+		transform: translateX(1000%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
+
+.slide_from_left{
+  animation: slide_from_left 1s ease-in-out;
+}
+
+@keyframes slide_from_left{
+	0%{
+		transform: translateX(-1000%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
+
+
+.opacity{
+  animation: opacity 1.5s ease-in-out;
+}
+
+@keyframes opacity{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+

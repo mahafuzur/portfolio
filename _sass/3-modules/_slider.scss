@@ -1,0 +1,44 @@
+/*****************************
+  single page slider style 
+*****************************/
+
+.slide-viewer {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+    transition: all 0.3s ease;
+  .slide-group {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .slide {
+      width: 100%;
+      height: auto;
+      display: none;
+      position: absolute;
+    }
+    .slide:first-child {
+      display: block;
+    }
+  }
+  .slide-buttons {
+    text-align: left;
+    position: absolute;
+    left: 0;
+    z-index: 40;
+    background: rgba(lighten($SUN-FLOWER, 10%), 0.9);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+    width: 100%;
+  }
+  .slide-btn {
+    border: none;
+    background: none;
+    color: lighten($BLUE-DIANNE, 10%);
+    font-size: 200%;
+  }
+  .slide-btn.active,
+  .slide-btn:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+}

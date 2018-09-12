@@ -1,0 +1,27 @@
+--- 
+layout: page
+title : "All Projects"
+body_class: "half_page"
+page_class: "all_projects"
+---
+
+<div class="projects {{page.page_class}} box">
+  <h2 class="feature_project_heading">Some of my work</h2>
+  <div class="project_image">
+    {% for project in site.projects %}
+    <div class="item-hover square effect">
+      <a href="{{site.baseurl}}{{project.url}}">
+       {% assign file_name = project.url | split: "/" | last %}
+        <div class="img">
+          <img src="{{site.baseurl}}{{project.url | remove: file_name  }}assets/{{project.images | first}}" alt="img">
+        </div>
+        <div class="info">
+          <h4>{{project.title}}</h4>
+          <p>{{project.category}}</p>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+

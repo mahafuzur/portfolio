@@ -1,0 +1,28 @@
+.half_page {
+  header {
+    border-bottom: 5px solid #333;
+  }
+  .header-background {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 370px;
+    background-image: linear-gradient(-45deg, rgba(241, 196, 15, 0.7), rgba(41, 128, 185, 0.7)), url(../images/ss1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  .all_projects {
+    @include grid-column(8);
+    @include grid-shift(2);
+    margin: 0;
+    top: 0px;
+    margin-top: -250px;
+  }
+  
+  .project_image {
+    background: rgba($BLUE-DIANNE, 1);
+    padding-bottom: 30px;
+  }
+}

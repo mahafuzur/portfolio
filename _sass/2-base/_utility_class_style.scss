@@ -1,0 +1,79 @@
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.clearfix:after,
+.clearfix:before,
+.container:after,
+.container:before,
+.modal-footer:after,
+.modal-footer:before,
+.modal-header:after,
+.modal-header:before,
+.row:after,
+.row:before {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after,
+.container:after,
+.modal-footer:after,
+.modal-header:after,
+.row:after {
+    clear: both;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* social midea icon color */
+
+.red {
+    background-color: #F44336 !important;
+}
+
+.indigo {
+    background-color: #3f51b5 !important;
+}
+
+.blue {
+    background-color: #2196F3 !important;
+}
+
+.blue.darken-3 {
+    background-color: #1565C0 !important;
+}
+
+.orange {
+    background-color: #ff9800 !important;
+}
+
+.orange.darken-3 {
+    background-color: #ef6c00 !important;
+}
+
