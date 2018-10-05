@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 205 205" enable-background="new 0 0 205 205" xml:space="preserve">
+<g>
+	<rect x="2.5" y="2.5" fill="#F4D03F" stroke="#3F6768" stroke-width="5" stroke-miterlimit="10" width="200" height="200"/>
+	<polygon fill="#315B5A" points="139.2,22.1 103.5,99.5 68,22.1 17.5,22.1 17.5,187.1 62.5,187.1 62.5,98.9 91.4,161.1 115.5,161.1 
+		142.5,98.9 142.5,187.1 187.5,187.1 187.5,22.1 	"/>
+	<polygon fill="#4F7F7F" points="138.2,21.1 102.5,98.5 67,21.1 16.5,21.1 16.5,186.1 61.5,186.1 61.5,97.9 90.4,160.1 114.5,160.1 
+		141.5,97.9 141.5,186.1 186.5,186.1 186.5,21.1 	"/>
+</g>
+</svg>

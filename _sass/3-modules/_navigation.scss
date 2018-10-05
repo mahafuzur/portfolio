@@ -2,6 +2,15 @@
   Site navigation style
 *****************************/
 
+#logo{
+    padding: 15px;
+}
+
+#logo svg{
+    max-width: 100%;
+    height: auto;
+}
+
 .navigation{
   background: rgba($BLUE-DIANNE, 0.8);
   width: 15%;
@@ -10,7 +19,8 @@
   left: -100%;
   top: 0;
   z-index: 150;
-  padding-top: 20px;
+//  padding-top: 20px;
+  padding-top: 0px;// for logo
   transition: left 0.3s ease;
   li{
     border-bottom: 1px solid darken($BLUE-DIANNE, 10%);
