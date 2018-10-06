@@ -1,0 +1,22 @@
+<div class="widget widget_recent_project">
+  <h4 class="widget_title">Recent Project</h4>
+  <div class="widget_inner">
+
+{% for project in site.projects limit: 4 %}
+    <div class="media">
+      <div class="media-left">
+        <a href="{{site.baseurl}}{{project.url}}">
+       {% assign file_name = project.url | split: "/" | last %}
+          <img src="{{site.baseurl}}{{project.url | remove: file_name  }}assets/{{project.images | first}}" class="img-responsive" alt="Image"></a>
+      </div>
+      <div class="media-body">
+        <h5 class="title">
+          <a href="{{site.baseurl}}{{project.url}}">{{project.title}}</a>
+        </h5>
+        <p class="date">{{ project.date | date: "%B %-d, %Y"}}</p>
+      </div>
+    </div>
+{% endfor %}
+
+  </div>
+</div>

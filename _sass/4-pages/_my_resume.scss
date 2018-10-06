@@ -620,10 +620,10 @@
 /* anylize where it's fit */
 
 .box {
-    transition: margin-left 0.3s ease-in-out;
+    transition: margin-left 0.3s ease-in-out !important;
 }
 
 .box.margin-left40 {
     margin-left: 40px;
-    transition: margin-left 0.3s ease-in-out;
+    transition: margin-left 0.3s ease-in-out !important;
 }

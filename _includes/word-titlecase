@@ -1,0 +1,4 @@
+<!-- // title case the given variable string -->
+{% assign words = include.data | split: ' ' %}
+
+{% capture titlecase %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endcapture %}

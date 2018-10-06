@@ -1,0 +1,66 @@
+---
+layout: page
+---
+
+<div class="blog_container">
+  <div class="blog clearfix">
+
+    <div class="blog_posts">
+
+      <h2 class="page_heading">Blog</h2>
+      <div class="breadcrumbs">
+        {% include breadcrumbs.html %}
+      </div>
+      {% for post in paginator.posts limit : 6 %}
+      <article class="post">
+        <h3 class="post_title">
+          <a class="post-link" href="{{site.baseurl}}{{post.url}}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {% if post.image %}
+        <div class="post-image">
+          <a href="{{site.baseurl}}{{post.url}}"><img src="{{site.baseurl}}/assets/images/post-images/{{post.image}}" alt="{{post.title}}-image" /></a>
+        </div>
+        {% endif %}
+        <ul class="post_meta">
+          <li>
+            <i class="fa fa-user"></i>
+            By:
+            <a href="{{site.baseurl}}/archives/authors/#{{post.author | downcase | slugify}}">{{ post.author }}</a>
+          </li>
+          <li>
+            <i class="fa fa-user"></i>
+            On:
+            <a href="{{site.baseurl}}/archives/year/#{{ post.date | date: "%Y" }}">{{ post.date | date: "%b %-d, %Y" }}</a>
+          </li>
+          <li>
+            <i class="fa fa-tag"></i>
+            Category:
+            {%- include categories-list.html class="categories_cloud" -%}</li>
+          <li>
+            <i class="fa fa-hourglass"></i>
+            {% include read-time.html content=post.content%}
+          </li>
+        </ul>
+        <div class="post-content">
+          <p>
+            {{post.content | markdownify | strip_html | truncatewords: 50}}
+            <a class="read-more" href="{{site.baseurl}}{{post.url}}">Read More >></a>
+          </p>
+        </div>
+        <div class="post_footer">
+          {% include posts-tags.html class="tag-list" %}
+        </div>
+      </article>
+      {% endfor %}
+
+      <div class="pagination">
+        {% include blog-pagination.html %}
+      </div>
+    </div>
+
+    {% include blog-sidebar.html class='blog_sidebar' %}
+
+  </div>
+</div>

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<h2>Posts related to: {{ page.tag }}</h2>
+
+{% unless page.content == '' %}
+	{{ content }}
+{% endunless %}
+
+
+{%- unless site.tags[page.tag] -%}
+	<p>No posts in this tag at this time.</p>
+{%- endunless -%}
+
+{%- for post in site.tags[page.tag] -%}
+	<div>
+		<a href="{{ post.url | prepend: site.baseurl}}">
+			<h3>
+				{{ post.title }}
+			</h3>
+			{% if post.subtitle %}
+			<h4>
+				{{ post.subtitle }}
+			</h4>
+			{% endif %}
+		</a>
+		<p>
+			Posted by
+			{% if post.author %}
+				{{ post.author }}
+			{% else %}
+				{{ site.title }}
+			{% endif %}
+			on {{ post.date | date: "%B %-d, %Y" }}
+		</p>
+	</div>
+	
+{% endfor %}

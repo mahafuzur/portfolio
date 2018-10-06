@@ -1,0 +1,29 @@
+<div class="widget widget_related_post">
+  <h4 class="widget_title">Related Post</h4>
+  <div class="widget_inner">
+
+  {% for post in site.related_posts limit: {{include.limit}} %}
+      {% assign match = false %}
+      {% for category in post.categories %}
+      {% if page.categories contains category %}
+        {% assign match = true %}
+      {% endif %}
+      {% endfor %}
+      {% if match %}
+    <div class="media">
+      <div class="media-left">
+        <a href="{{site.baseurl}}{{post.url}}">
+          <img src="{{site.baseurl}}/assets/images/post-images/{{post.image}}" alt="Image"></a>
+      </div>
+      <div class="media-body">
+        <h5 class="title">
+          <a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+        </h5>
+        <p class="date">{{ post.date | date: "%B %-d, %Y"}}</p>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+
+  </div>
+</div>

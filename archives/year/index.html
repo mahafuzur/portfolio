@@ -1,0 +1,22 @@
+---
+layout: archives
+title: Year
+---
+
+<h2 class="page_heading">{{page.title}}</h2>
+<div class="breadcrumbs">
+  {% include breadcrumbs.html %}
+</div>
+{% for post in site.posts %}
+{% assign currentDate = post.date | date: "%Y" %}
+{% if currentDate != myDate %}
+{% unless forloop.first %}</article>
+</ul>{% endunless %}
+<article class="post">
+  <h3 class="post_title" id={{ currentDate }}><a href="#{{ currentDate }}">{{ currentDate }}</a></h3>
+  <ul class="post_list">
+    {% assign myDate = currentDate %}
+    {% endif %}
+    <li><a href="{{ post.url }}"><i class="fa fa-hand-o-right"></i> <span>{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}</a></li>
+    {% if forloop.last %}</ul>{% endif %}
+  {% endfor %}

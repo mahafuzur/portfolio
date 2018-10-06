@@ -5,6 +5,11 @@
   <title>{{site.title}} {% if page.title %} - {{page.title}}{% endif %}</title>
   {% include head-links.html %}
   {% include head-script.html %}
+<style media="screen">
+  a[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]{
+      display: none !important;
+  }
+</style>
 </head>
 <body class="{%if page.body_class %}{{page.body_class}}{% else %}{{layout.body_class}}{% endif %}">
 

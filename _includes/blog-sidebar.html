@@ -1,0 +1,13 @@
+
+<div class="{{ include.class }}">
+
+  {% include widget-about-me.html %}
+
+  {% include widget-recent-project.html %}
+
+  {% if page.layout == "post" %}
+  {% include widget-related-posts.html limit=3 %}
+  {% endif %}
+
+  {% include widget-recent-posts.html %}
+</div>

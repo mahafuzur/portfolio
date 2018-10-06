@@ -3,7 +3,8 @@
 *****************************/
 
 #logo{
-    padding: 15px;
+    padding: 10px 40px;
+    background: #333;
 }
 
 #logo svg{
@@ -108,4 +109,16 @@
 .menu_toggle.menu-open{
   left: 15%;
   transition: left 0.3s ease;
+}
+
+.breadcrumbs{
+  background: rgba($BLUE-DIANNE, 1);
+  padding: 5px 25px;
+  color: #999;
+}
+.breadcrumbs a{
+  border: none;
+}
+.breadcrumbs a:hover{
+  color: #999;
 }

@@ -1,0 +1,33 @@
+---
+layout: archives
+title: Author
+---
+
+
+<h2 class="page_heading">{{page.title}}</h2>
+<div class="breadcrumbs">
+  {% include breadcrumbs.html %}
+</div>
+{% assign authors = "" | split: ',' %}
+{% for author in site.data.authors %}
+{% assign authors = authors | push: author %}
+{% endfor %}
+
+{% for author in authors %}
+{% assign authorName = author.name %}
+
+{%- include word-titlecase data=authorName -%}
+
+<article class="post">
+  <h3 class="post_title" id="{{ author.name | downcase | slugify }}"><a href="#{{ author.name | downcase | slugify }}">{{titlecase}}</a> - Post's</h3>
+  <ul class="post_list">
+    {% for post in site.posts %}
+
+    {% unless post.author != author.name %}
+    <li><a href="{{post.url}}"><i class="fa fa-hand-o-right"></i> {{post.title}}</a></li>
+    {% endunless %}
+
+    {% endfor %}
+  </ul>
+</article>
+{% endfor %}

@@ -1,0 +1,19 @@
+<div class="widget widget_recent_post">
+  <h4 class="widget_title">Recent Post</h4>
+  <div class="widget_inner">
+    {% for post in site.posts limit: 3 %}
+    <div class="media">
+      <div class="media-left">
+        <a href="{{site.baseurl}}{{post.url}}">
+          <img src="{{site.baseurl}}/assets/images/post-images/{{post.image}}" alt="Image"></a>
+      </div>
+      <div class="media-body">
+        <h5 class="title">
+          <a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+        </h5>
+        <p class="date">{{ post.date | date: "%B %-d, %Y"}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

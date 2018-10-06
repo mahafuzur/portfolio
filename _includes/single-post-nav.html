@@ -1,0 +1,10 @@
+<div class="pagination">
+  <ul>
+    {% if page.previous.url %}
+    <li><a href="{{site.baseurl}}{{page.previous.url}}"><< Back</a></li>
+    {% endif %}
+    {% if page.next.url %}
+    <li><a href="{{site.baseurl}}{{page.next.url}}">Next >></a></li>
+    {% endif %}
+  </ul>
+</div>

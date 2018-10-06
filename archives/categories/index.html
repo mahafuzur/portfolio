@@ -1,0 +1,37 @@
+---
+layout: archives
+title: Categories
+---
+
+<h2 class="page_heading">{{page.title}}</h2>
+<div class="breadcrumbs">
+  {% include breadcrumbs.html %}
+</div>
+<section class="categories_page">
+
+  <article class="site_catagories post">
+
+    {%- include taxonomy-loop class="tag-list" taxonomies_data=site.categories -%}
+
+  </article>
+
+
+{% for category in site.categories %}
+  <article class="post">
+    <h3 id="{{ category[0] | downcase | slugify }}" class="post_title">
+      <a href="#{{ category[0] | downcase | slugify }}">{{ category[0] | upcase  | replace:'-', ' ' }}</a>
+    </h3>
+    <ul class="post_list">
+      {% assign sorted_posts = site.posts | sort: 'title' %} {% for post in sorted_posts %} {%if post.categories contains category[0]%}
+      <li class="tag_post">
+        <a href="{{ post.url }}" title="{{ post.title }}"><i class="fa fa-hand-o-right"></i>
+            {{ post.title }} -
+            <small class="mark">{{ post.date | date_to_string }}</small>
+        </a>
+      </li>
+      {% endif %} {% endfor %}
+    </ul>
+  </article>
+{% endfor %}
+
+</section>

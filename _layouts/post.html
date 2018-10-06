@@ -1,0 +1,57 @@
+---
+layout: page
+body_class: "half_page blog_page"
+---
+
+
+<div class="blog_container">
+  <div class="blog clearfix">
+
+    <div class="blog_posts">
+      <div class="breadcrumbs">
+        {% include breadcrumbs.html %}
+      </div>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h2 class="post_title" itemprop="name headline">{{ page.title | escape }}</h2>
+          {% if page.image %}
+          <div class="post-image">
+            <a href="{{site.baseurl}}{{post.url}}"><img src="{{site.baseurl}}/assets/images/post-images/{{page.image}}" alt="{{page.title}}-image" /></a>
+          </div>
+          {% endif %}
+          <ul class="post_meta">
+            <li>
+              <i class="fa fa-user"></i>
+              By:
+              <a href="{{site.baseurl}}/archives/authors/#{{page.author | downcase | slugify}}">{{ page.author }}</a>
+            </li>
+            <li>
+              <i class="fa fa-user"></i>
+              On:
+              <a href="{{site.baseurl}}/archives/year/#{{ page.date | date: "%Y" }}">{{ page.date | date: "%b %-d, %Y" }}</a>
+            </li>
+            <li>
+              <i class="fa fa-tag"></i>
+              Category:
+              {%- include categories-list.html class="categories_cloud" -%}</li>
+            <li>
+              <i class="fa fa-hourglass"></i>
+              {% include read-time.html content=page.content%}
+            </li>
+          </ul>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          {{ content }}
+        </div>
+        <div class="post_footer">
+          {% include posts-tags.html class="tag-list" %}
+        </div>
+      </article>
+  {%- include single-post-nav.html -%}
+    </div>
+
+{% include blog-sidebar.html class='blog_sidebar' %}
+  </div>
+</div>
