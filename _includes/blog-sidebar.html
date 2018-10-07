@@ -10,4 +10,9 @@
   {% endif %}
 
   {% include widget-recent-posts.html %}
+
+  {% if page.url contains "tags" %}
+  {% else %}
+  {% include widget-tags-cloud.html %}
+  {% endif %}
 </div>

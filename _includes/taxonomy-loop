@@ -1,6 +1,6 @@
 <!-- // loop over all of the taxonomies in site like catagories and tags -->
 <ul class="{{include.class}}">
   {% assign taxonomies = {{include.taxonomies_data}} | sort %}{% for taxonomy in taxonomies %}
-  <li><a href="#{{ taxonomy | first | slugify }}">{{ taxonomy[0] | downcase | replace:'-', ' ' }} <span class="item_size">({{ taxonomy | last | size }})</span></a></li>
+  <li><a href="{{site.baseurl}}/archives/tags/#{{ taxonomy | first | slugify }}">{{ taxonomy[0] | downcase | replace:'-', ' ' }} <span class="item_size">({{ taxonomy | last | size }})</span></a></li>
   {% endfor %}
 </ul>

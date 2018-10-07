@@ -8,10 +8,9 @@ tags:
   - "video tag"
   - "Cross browser"
 categories:
-  - "Snippets"
-type: html  
+  - "Snippets" 
 ---
-### Video For Everybody (HTML5 Video with Flash Fallback)
+#### Video For Everybody (HTML5 Video with Flash Fallback)
 
 <!--more-->
 
@@ -40,4 +39,4 @@ type: html
 </p>
 ```
 
-[Source](www.css-tricks.com)
+[Source](http://www.css-tricks.com)

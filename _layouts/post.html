@@ -14,7 +14,7 @@ body_class: "half_page blog_page"
       <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
         <header class="post-header">
-          <h2 class="post_title" itemprop="name headline">{{ page.title | escape }}</h2>
+          <h3 class="post_title" itemprop="name headline">{{ page.title | escape }}</h3>
           {% if page.image %}
           <div class="post-image">
             <a href="{{site.baseurl}}{{post.url}}"><img src="{{site.baseurl}}/assets/images/post-images/{{page.image}}" alt="{{page.title}}-image" /></a>
